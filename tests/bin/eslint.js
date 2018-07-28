@@ -67,7 +67,7 @@ describe("bin/eslint.js", () => {
             sh.rm("-rf", "tests/output");
         });
 
-        it("consoles out the console format", () => {
+        it("consoles out the console-format", () => {
             const child = runESLint([
                 "--stdin",
                 "--no-eslintrc",
@@ -106,6 +106,7 @@ describe("bin/eslint.js", () => {
 
             return Promise.all([exitCodePromise, stdoutPromise]);
         });
+
 
         it("does not output to stdout if the console format is not set", () => {
             const child = runESLint([
